@@ -13,9 +13,9 @@
     -webkit-font-smoothing: antialiased;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    padding: 40px 16px;
+    padding: 60px 16px 40px;
     background-color: #efffed;
   }
   @keyframes fadeUp {
@@ -79,9 +79,22 @@
     text-transform: uppercase;
   }
   .sub {
-    font-size: 14px; color: #888; margin-bottom: 24px; line-height: 1.5;
+    font-size: 14px; color: #888; margin-bottom: 12px; line-height: 1.5;
     animation: fadeUp 0.5s 0.32s ease both;
   }
+  .inbox-buttons {
+    display: flex; align-items: center; justify-content: center;
+    gap: 8px; flex-wrap: wrap; margin-bottom: 20px;
+    animation: fadeUp 0.5s 0.38s ease both;
+  }
+  .inbox-btn {
+    display: flex; align-items: center; gap: 5px;
+    padding: 7px 11px; border-radius: 8px; border: 1px solid #E5E5E3;
+    text-decoration: none; background: #fff; cursor: pointer; white-space: nowrap;
+    font-size: 12px; font-weight: 700; color: #1C2B1A; font-family: 'Inter', sans-serif;
+  }
+  .inbox-btn:hover { background: #FAFAFA; }
+  .inbox-sep { color: #E0E0DE; font-size: 16px; line-height: 1; }
   .divider { border: none; border-top: 1px solid #F0F0EE; margin: 20px 0; }
   .seen-label { font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #ccc; margin-bottom: 12px; }
   .seen-logos { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
@@ -110,6 +123,22 @@
     <iframe id="celebration-gif" src="" frameborder="0" allowfullscreen style="width:100%;height:100%;"></iframe>
   </div>
   <p class="sub">Check your inbox (or junk) now. We've just emailed you.</p>
+  <div class="inbox-buttons">
+    <a class="inbox-btn" href="https://mail.google.com" target="_blank">
+      <svg width="13" height="13" viewBox="0 0 48 48" fill="none"><path d="M4 8h40v32H4z" fill="#f2f2f2"/><path d="M4 8l20 14L44 8" stroke="#EA4335" stroke-width="3" fill="none"/><path d="M4 8v32l12-16" fill="#34A853"/><path d="M44 8v32L32 24" fill="#FBBC05"/><path d="M4 40l12-16h16l12 16" fill="#EA4335"/></svg>
+      Gmail
+    </a>
+    <span class="inbox-sep">|</span>
+    <a class="inbox-btn" href="message://" target="_blank">
+      <svg width="13" height="13" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="4" fill="#3478F6"/><path d="M6 14l18 12 18-12H6z" fill="white"/><path d="M6 34l14-10M42 34L28 24" stroke="white" stroke-width="2.5"/><rect x="6" y="14" width="36" height="20" fill="none" stroke="white" stroke-width="1.5"/></svg>
+      Apple Mail
+    </a>
+    <span class="inbox-sep">|</span>
+    <a class="inbox-btn" href="https://outlook.live.com" target="_blank">
+      <svg width="13" height="13" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="4" fill="#0078D4"/><path d="M6 14l18 12 18-12H6z" fill="white"/><path d="M6 34l14-10M42 34L28 24" stroke="white" stroke-width="2.5"/><rect x="6" y="14" width="36" height="20" fill="none" stroke="white" stroke-width="1.5"/></svg>
+      Outlook
+    </a>
+  </div>
   <hr class="divider">
   <p class="seen-label">As Seen In</p>
   <div class="seen-logos">
@@ -186,7 +215,7 @@
   }
 
   // slight delay so page is visible first
-  setTimeout(draw, 800);
+  setTimeout(draw, 150);
 })();
 </script>
 
