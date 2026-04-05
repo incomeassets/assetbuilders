@@ -120,7 +120,7 @@
   <div class="wordmark">AssetBuilders</div>
   <h1>Boom! You're In</h1>
   <div class="gif-block">
-    <iframe id="celebration-gif" src="" frameborder="0" allowfullscreen style="width:100%;height:100%;"></iframe>
+    <div class="tenor-gif-embed" id="tenor-random" data-postid="26871361" data-share-method="host" data-aspect-ratio="1.78" data-width="100%" style="border-radius:14px;overflow:hidden;"></div>
   </div>
   <p class="sub">Check your inbox (or junk) now. We've just emailed you.</p>
   <div class="inbox-buttons">
@@ -231,7 +231,6 @@
     "FibBZ3bFGGcoXCB1kd",
     "wt2ZDTyc7jYA9OwpI2",
     "8rFgzA7aBR0aomiOMj",
-    "8nmvR3jAxnl2o",
     "AjkUQrzvs5OCc"
   ];
     const id = gifs[Math.floor(Math.random() * gifs.length)];
@@ -240,5 +239,23 @@
   })();
 </script>
 
+
+<script>
+(function() {
+  const posts = [
+    {id: '26871361', ratio: 1.788},
+    {id: '4762745',  ratio: 1.786},
+    {id: '27513242', ratio: 1.758},
+    {id: '7727107777105242447', ratio: 1.547},
+    {id: '21510826033213311',   ratio: 1.547},
+    {id: '25359037', ratio: 1.778}
+  ];
+  const pick = posts[Math.floor(Math.random() * posts.length)];
+  const el = document.getElementById('tenor-random');
+  el.setAttribute('data-postid', pick.id);
+  el.setAttribute('data-aspect-ratio', pick.ratio);
+})();
+</script>
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 </body>
 </html>
